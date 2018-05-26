@@ -161,13 +161,13 @@ def Bubble_sort(array):
     
     flag = True
     while flag:
-        flag = True
-        for i in range(0, len(array)):
+        flag = False
+        for i in range(0, len(array)-1):
             if array[i].get_Price() > array[i+1].get_Price():
                 temp = array[i]
                 array[i] = array[i+1]
                 array[i+1] = temp
-                flag = False
+                flag = True
 
 def Insertion_sort(array):
     if len(array) == 1:
@@ -176,7 +176,7 @@ def Insertion_sort(array):
     for i in range(1, len(array)):
         temp = array[i]
         position = i
-        while array[position-1] > temp and position > 0:
+        while array[position-1].get_Price() > temp.get_Price() and position > 0:
             array[position] = array[position-1]
             position = position - 1
         array[position] = temp
