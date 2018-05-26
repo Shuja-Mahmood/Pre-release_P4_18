@@ -1,12 +1,36 @@
+# Task 1.5
+
+"""
+WHILE NOT EOF            # while not end of file
+    CALL ReadSalary()
+    IF Salary > 50
+        THEN
+            IF Salary > 70
+                THEN
+                    IF Salary >= 90
+                        THEN
+                            Role ← "Project Manager"
+                        ELSE
+                            Role ← "Consultant"
+                    ENDIF
+                ELSE
+                    Role ← "Lead Developer"
+            ENDIF
+        ELSE
+            Role ← "Manager"
+    ENDIF
+ENDWHILE
+"""
+
 # Task 1.6
 def Staff_role(salary):
-    if salary < 50:
+    if salary <= 50:
         return "Assign Manager"
-    elif salary >= 50 and salary < 70:
+    elif salary > 50 and salary <= 70:
         return "Assign Lead Developer"
-    elif salary >= 70 and salary < 90:
+    elif salary > 70 and salary <= 90:
         return "Consultant"
-    elif salary >= 90:
+    elif salary > 90:
         return "Assign Project Manager"
 
 # Task 2.3 & 2.5
